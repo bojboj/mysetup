@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "mysetup"
+version = "0.0.1"
+description = "Package to set up my development environment"
+authors = ["Job Cabral"]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+typer = "^0.7.0"
