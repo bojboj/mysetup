@@ -7,10 +7,14 @@ import typer
 def main():
     config = Path.home().joinpath('.config')
     myconfig = config.joinpath('myconfig')
+    projectconfig = config.joinpath('projectconfig')
     nvim = config.joinpath('nvim')
 
     print(f'updating {myconfig}')
     os.system(f'cd {myconfig} && git pull')
+
+    print(f'updating {projectconfig}')
+    os.system(f'cd {projectconfig} && git pull')
 
     print(f'updating {nvim}')
     os.system(f'cd {nvim} && git pull')
