@@ -3,8 +3,16 @@ from pathlib import Path
 
 import typer
 
+app = typer.Typer()
 
-def main():
+
+@app.command()
+def install():
+    print("installing")
+
+
+@app.command()
+def update():
     config = Path.home().joinpath(".config")
     myconfig = config.joinpath("myconfig")
     projectconfig = config.joinpath("projectconfig")
@@ -26,4 +34,4 @@ def main():
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
